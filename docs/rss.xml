@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[debug_documentation]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>debug_documentation</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 16 Aug 2024 09:38:28 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 16 Aug 2024 09:38:27 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Login Failures]]></title><description><![CDATA[ 
+ <br>Login Failures<br>
+<br>Verify user credentials.
+<br>Check authentication provider settings (e.g., JWT, OAuth).
+]]></description><link>v2-doc/issues/authentication-issues/login-failures.html</link><guid isPermaLink="false">V2 Doc/Issues/Authentication Issues/Login Failures.md</guid><pubDate>Fri, 09 Aug 2024 10:45:25 GMT</pubDate></item><item><title><![CDATA[Overview]]></title><description><![CDATA[ 
+ ]]></description><link>v2-doc/issues/authentication-issues/overview.html</link><guid isPermaLink="false">V2 Doc/Issues/Authentication Issues/Overview.md</guid><pubDate>Fri, 02 Aug 2024 16:58:07 GMT</pubDate></item><item><title><![CDATA[SSL certificate errors]]></title><description><![CDATA[ 
+ <br>SSL certificate errors occur when a web browser can't verify the SSL certificate installed on a site. For SSL errors such as:<br>ERROR:  
+{  
+code: EPROTO,  
+errno: EPROTO,  
+message:  
+request to &lt;graphql-api&gt; failed, reason: write EPROTO &lt;....&gt; alert handshake failure:..&lt;...&gt;: SSL alert number 40  
+}
+Copy<br>Follow the steps below to try and resolve the issue:<br>
+<br>Allowlist the EPROTO error code (in client-side code).
+<br>Allow the retry logic to be activated.
+<br>Monitor the system for improvements or changes in the reconciliation process.
+]]></description><link>v2-doc/issues/authentication-issues/ssl-certificate-errors.html</link><guid isPermaLink="false">V2 Doc/Issues/Authentication Issues/SSL certificate errors.md</guid><pubDate>Mon, 05 Aug 2024 10:24:49 GMT</pubDate></item><item><title><![CDATA[Common]]></title><description><![CDATA[ 
+ <br>
+<br>Loading Failures
+
+<br>Check browser console for error messages.
+<br>Ensure network requests are not being blocked.
+
+
+<br>UI Bugs
+
+<br>Report issues on Hasura’s GitHub repository.
+<br>Check for updates or patches from Hasura.
+
+
+]]></description><link>v2-doc/issues/console-issues/common.html</link><guid isPermaLink="false">V2 Doc/Issues/Console Issues/Common.md</guid><pubDate>Fri, 02 Aug 2024 17:01:32 GMT</pubDate></item><item><title><![CDATA[Data Mismatches]]></title><description><![CDATA[ 
+ ]]></description><link>v2-doc/issues/data-inconsistency/data-mismatches.html</link><guid isPermaLink="false">V2 Doc/Issues/Data Inconsistency/Data Mismatches.md</guid><pubDate>Fri, 09 Aug 2024 10:45:53 GMT</pubDate></item><item><title><![CDATA[Stale Data]]></title><description><![CDATA[ 
+ <br>
+<br>Stale Data
+
+<br>Implement cache invalidation strategies.
+<br>Ensure data is being properly refreshed.
+
+
+]]></description><link>v2-doc/issues/data-inconsistency/stale-data.html</link><guid isPermaLink="false">V2 Doc/Issues/Data Inconsistency/Stale Data.md</guid><pubDate>Fri, 02 Aug 2024 17:00:07 GMT</pubDate></item><item><title><![CDATA[Common Issues]]></title><description><![CDATA[ 
+ <br>
+<br>Database Unreachable
+
+<br>Verify database server status.
+<br>Check connection strings and credentials.
+
+
+<br>Timeouts
+
+<br>Ensure the database is not overloaded.
+<br>Adjust ——-
+
+
+]]></description><link>v2-doc/issues/database-issue/common-issues.html</link><guid isPermaLink="false">V2 Doc/Issues/Database Issue/Common Issues.md</guid><pubDate>Fri, 02 Aug 2024 16:57:57 GMT</pubDate></item><item><title><![CDATA[Overview]]></title><description><![CDATA[ 
+ <br>If you come across a database error, it will be helpful to check the logs:<br>
+<br>
+<a data-tooltip-position="top" aria-label="https://www.postgresql.org/docs/current/index.html" rel="noopener" class="external-link" href="https://www.postgresql.org/docs/current/index.html" target="_blank">Postgres documentation</a>.
+Todo
+
+]]></description><link>v2-doc/issues/database-issue/overview.html</link><guid isPermaLink="false">V2 Doc/Issues/Database Issue/Overview.md</guid><pubDate>Fri, 09 Aug 2024 10:46:12 GMT</pubDate></item><item><title><![CDATA[Client Side Problems]]></title><description><![CDATA[ 
+ <br>GraphQL is strongly typed and it performs validation of all queries before executing them. It can reject a query if it is invalid based on a set of rules.<br>The validation rules could again be split into<br>
+<br>malformed query
+<br>syntax or schema logic
+<br>variables and fragments not defined properly.
+<br>Read the source code for&nbsp;<a data-tooltip-position="top" aria-label="https://github.com/graphql/graphql-js/tree/main/src/validation" rel="noopener" class="external-link" href="https://github.com/graphql/graphql-js/tree/main/src/validation" target="_blank">validation rules</a>&nbsp;in graphql-js server to understand various query validation that goes through before executing the query.]]></description><link>v2-doc/issues/graphql-errors/client-side-problems.html</link><guid isPermaLink="false">V2 Doc/Issues/GraphQL Errors/Client Side Problems.md</guid><pubDate>Mon, 05 Aug 2024 12:46:43 GMT</pubDate></item><item><title><![CDATA[Handling GraphQL Errors with Hasura & React]]></title><description><![CDATA[ 
+ <br><a rel="noopener" class="external-link" href="https://hasura.io/blog/handling-graphql-hasura-errors-with-react" target="_blank">https://hasura.io/blog/handling-graphql-hasura-errors-with-react</a>]]></description><link>v2-doc/issues/graphql-errors/handling-graphql-errors-with-hasura-&amp;-react.html</link><guid isPermaLink="false">V2 Doc/Issues/GraphQL Errors/Handling GraphQL Errors with Hasura &amp; React.md</guid><pubDate>Mon, 05 Aug 2024 12:51:39 GMT</pubDate></item><item><title><![CDATA[Nulls in GraphQL]]></title><description><![CDATA[ 
+ <br><br><br><br>Insert the following names into the table using the console:<br>
+<br>User1
+<br>User
+<br>User
+<br>Test queries and expected outcome:<br>]]></description><link>v2-doc/issues/graphql-errors/nulls-in-graphql.html</link><guid isPermaLink="false">V2 Doc/Issues/GraphQL Errors/Nulls in GraphQL.md</guid><pubDate>Tue, 06 Aug 2024 09:43:37 GMT</pubDate></item><item><title><![CDATA[Overview]]></title><description><![CDATA[ 
+ <br>Error handling in GraphQL is different on both server and client side tooling.<br>
+When the response contains the&nbsp;errors&nbsp;object along with the&nbsp;data&nbsp;object, it could mean a partially correct response for the request. Digging into the errors object will give a better idea into what part of the query went wrong.<br>The default errors JSON includes&nbsp;message,&nbsp;locations&nbsp;and&nbsp;path. According to the working draft of the spec, it is also possible to send custom data in the&nbsp;extensions&nbsp;key.]]></description><link>v2-doc/issues/graphql-errors/overview.html</link><guid isPermaLink="false">V2 Doc/Issues/GraphQL Errors/Overview.md</guid><pubDate>Mon, 05 Aug 2024 12:47:09 GMT</pubDate></item><item><title><![CDATA[Reference Docs]]></title><description><![CDATA[ 
+ <br>
+<br><a rel="noopener" class="external-link" href="https://hasura.io/blog/top-graphql-errors-and-how-to-fix-them" target="_blank">https://hasura.io/blog/top-graphql-errors-and-how-to-fix-them</a>
+<br><a rel="noopener" class="external-link" href="https://github.com/graphql/graphql-js/tree/main/src/validation" target="_blank">https://github.com/graphql/graphql-js/tree/main/src/validation</a>
+<br><a rel="noopener" class="external-link" href="https://hasura.io/blog/handling-graphql-hasura-errors-with-react" target="_blank">https://hasura.io/blog/handling-graphql-hasura-errors-with-react</a>
+<br><a rel="noopener" class="external-link" href="https://hasura.io/docs/latest/troubleshooting/index/" target="_blank">https://hasura.io/docs/latest/troubleshooting/index/</a>
+<br><a rel="noopener" class="external-link" href="https://hasura.io/docs/latest/observability/cloud-monitoring/index/#error-reporting" target="_blank">https://hasura.io/docs/latest/observability/cloud-monitoring/index/#error-reporting</a>
+<br><a rel="noopener" class="external-link" href="https://hasura.io/docs/latest/api-reference/source-health/#response" target="_blank">https://hasura.io/docs/latest/api-reference/source-health/#response</a>
+<br><a rel="noopener" class="external-link" href="https://hasura.io/blog/graphql-nulls-cheatsheet" target="_blank">https://hasura.io/blog/graphql-nulls-cheatsheet</a>
+<br>
+]]></description><link>v2-doc/issues/graphql-errors/reference-docs.html</link><guid isPermaLink="false">V2 Doc/Issues/GraphQL Errors/Reference Docs.md</guid><pubDate>Tue, 06 Aug 2024 09:44:06 GMT</pubDate></item><item><title><![CDATA[Server - Network Errors]]></title><description><![CDATA[ 
+ <br>All the errors above come under the category of GraphQL errors with a response status code of&nbsp;200. When there is a network error while trying to contact a GraphQL server, due to either the server being down or timeouts etc, then the response will be a status code of 4xx or 5xx.<br>If the server responds anything other than 200, the response is not successful due to either being a:<br>
+<br>Bad request (400)
+<br>Unauthorized (401)
+<br>Gateway errors (5xx)
+<br>These are non-ideal scenarios where the original response couldn't be delivered via 200 (despite there is a possibility of a request containing an error). This non-standard response needs to be checked with the server for underlying issue like network errors etc.]]></description><link>v2-doc/issues/graphql-errors/server-network-errors.html</link><guid isPermaLink="false">V2 Doc/Issues/GraphQL Errors/Server - Network Errors.md</guid><pubDate>Mon, 05 Aug 2024 12:41:41 GMT</pubDate></item><item><title><![CDATA[Common Commands]]></title><description><![CDATA[ 
+ ]]></description><link>v2-doc/issues/memory-issues/common-commands.html</link><guid isPermaLink="false">V2 Doc/Issues/Memory Issues/Common Commands.md</guid><pubDate>Fri, 02 Aug 2024 16:56:59 GMT</pubDate></item><item><title><![CDATA[Memory Leaks]]></title><description><![CDATA[ 
+ <br>Identify Leaks<br>
+<br>Use monitoring tools to identify memory usage patterns.
+<br>Analyze application logs for potential memory leaks.
+<br>Get the haskell memory dump with hasura team
+]]></description><link>v2-doc/issues/memory-issues/memory-leaks.html</link><guid isPermaLink="false">V2 Doc/Issues/Memory Issues/Memory Leaks.md</guid><pubDate>Fri, 09 Aug 2024 10:46:36 GMT</pubDate></item><item><title><![CDATA[Out of Memory ( OOM ) Errors]]></title><description><![CDATA[ 
+ <br>Increase Memory Allocation<br>
+<br>Adjust the memory limits for the Hasura container.<br>
+Optimize Queries
+<br>Ensure queries are efficient and not fetching excessive data.
+]]></description><link>v2-doc/issues/memory-issues/out-of-memory-(-oom-)-errors.html</link><guid isPermaLink="false">V2 Doc/Issues/Memory Issues/Out of Memory ( OOM ) Errors.md</guid><pubDate>Fri, 09 Aug 2024 10:47:12 GMT</pubDate></item><item><title><![CDATA[Kubernetes]]></title><description><![CDATA[ 
+ ]]></description><link>v2-doc/issues/ops-matrix-commands,-scripts-and-playbook/kubernetes.html</link><guid isPermaLink="false">V2 Doc/Issues/Ops Matrix - Commands, Scripts and Playbook/Kubernetes.md</guid><pubDate>Wed, 07 Aug 2024 15:54:35 GMT</pubDate></item><item><title><![CDATA[Postgres]]></title><description><![CDATA[ 
+ <br>
+<br>Top 10 tables with their size:
+<br>select schemaname as table_schema,
+    relname as table_name,
+    pg_size_pretty(pg_total_relation_size(relid)) as total_size,
+    pg_size_pretty(pg_relation_size(relid)) as data_size,
+    pg_size_pretty(pg_total_relation_size(relid) - pg_relation_size(relid))
+      as external_size
+from pg_catalog.pg_statio_user_tables
+order by pg_total_relation_size(relid) desc,
+         pg_relation_size(relid) desc
+limit 10;
+
+Copy<br>
+<br>Postgres useful commands (Killing running queries, db size, running queries)
+<br>-- show running queries (9.2)
+SELECT pid, age(clock_timestamp(), query_start), usename, query 
+FROM pg_stat_activity 
+WHERE query != '&lt;IDLE&gt;' AND query NOT ILIKE '%pg_stat_activity%' 
+ORDER BY query_start desc;
+
+-- kill running query
+SELECT pg_cancel_backend(procpid);
+
+-- kill idle query
+SELECT pg_terminate_backend(procpid);
+
+-- vacuum command
+VACUUM (VERBOSE, ANALYZE);
+
+-- all database users
+select * from pg_stat_activity where current_query not like '&lt;%';
+
+-- all databases and their sizes
+select * from pg_user;
+
+-- all tables and their size, with/without indexes
+select datname, pg_size_pretty(pg_database_size(datname))
+from pg_database
+order by pg_database_size(datname) desc;
+
+-- cache hit rates (should not be less than 0.99)
+SELECT sum(heap_blks_read) as heap_read, sum(heap_blks_hit)  as heap_hit, (sum(heap_blks_hit) - sum(heap_blks_read)) / sum(heap_blks_hit) as ratio
+FROM pg_statio_user_tables;
+
+-- table index usage rates (should not be less than 0.99)
+SELECT relname, 100 * idx_scan / (seq_scan + idx_scan) percent_of_times_index_used, n_live_tup rows_in_table
+FROM pg_stat_user_tables 
+ORDER BY n_live_tup DESC;
+
+-- how many indexes are in cache
+SELECT sum(idx_blks_read) as idx_read, sum(idx_blks_hit)  as idx_hit, (sum(idx_blks_hit) - sum(idx_blks_read)) / sum(idx_blks_hit) as ratio
+FROM pg_statio_user_indexes;
+
+-- Dump database on remote host to file
+$ pg_dump -U username -h hostname databasename &gt; dump.sql
+
+-- Import dump into existing database
+$ psql -d newdb -f dump.sql
+Copy]]></description><link>v2-doc/issues/ops-matrix-commands,-scripts-and-playbook/postgres.html</link><guid isPermaLink="false">V2 Doc/Issues/Ops Matrix - Commands, Scripts and Playbook/Postgres.md</guid><pubDate>Wed, 07 Aug 2024 15:49:46 GMT</pubDate></item><item><title><![CDATA[Overview]]></title><description><![CDATA[ 
+ <br>This document offers an in-depth guide to diagnosing and resolving performance issues and errors in Hasura-based GraphQL APIs. The primary focus areas include high response times, response errors, memory issues, console issues, and database issues. Each section addresses specific problems with clear, actionable solutions, ensuring optimal API performance and reliability.<br>This document highlights common performance bottlenecks and errors, providing strategies to diagnose and mitigate these issues effectively.]]></description><link>v2-doc/issues/performance-issue/overview.html</link><guid isPermaLink="false">V2 Doc/Issues/Performance Issue/Overview.md</guid><pubDate>Fri, 02 Aug 2024 16:31:52 GMT</pubDate></item><item><title><![CDATA[Response Error]]></title><description><![CDATA[ 
+ <br>If the server responds anything other than 200, the response is not successful due to either being a:<br>
+<br>Bad request (400)
+<br>Unauthorized (401)
+<br>Gateway errors (5xx)
+<br>These are non-ideal scenarios where the original response couldn't be delivered via 200 (despite there is a possibility of a request containing an error). This non-standard response needs to be checked with the server for underlying issue like network errors etc.<br>
+<br>4xx Errors
+
+<br>Unauthorized Access (401)
+
+<br>Verify authentication tokens.
+<br>Check user permissions in Hasura.
+
+
+<br>Forbidden (403)
+
+<br>Check role-based access control settings.
+<br>Ensure the user has the correct permissions for the requested operation.
+<br>Check the token passed
+
+
+<br>Not Found (404)
+
+<br>Verify the endpoint URL.
+<br>Ensure the requested resource exists in the database.
+
+
+
+
+<br>5xx Errors
+
+<br>Internal Server Error (500)
+
+<br>Check Hasura logs for detailed error messages.
+<br>Verify database connectivity.
+
+
+<br>Service Unavailable (503)
+
+<br>Check the status of the Hasura service.
+<br>Ensure the server is not overloaded.
+
+
+
+
+]]></description><link>v2-doc/issues/performance-issue/response-error.html</link><guid isPermaLink="false">V2 Doc/Issues/Performance Issue/Response Error.md</guid><pubDate>Fri, 16 Aug 2024 09:11:09 GMT</pubDate></item><item><title><![CDATA[Response Times]]></title><description><![CDATA[ 
+ <br>
+<br>High Latency
+
+<br>Network Latency
+
+<br>Check network connectivity.
+<br>Verify latency between client and server.
+
+
+<br>Database Query Optimization
+
+<br>Analyze slow queries using the Hasura console.
+<br>Use indexes and optimize SQL queries.
+
+
+<br>Server Load
+
+<br>Monitor CPU and memory usage on the server.
+<br>Scale up the infrastructure if necessary.
+
+
+<br>Long Running Queries
+
+
+<br>Rate Limiting
+
+<br>Client-side<br>
+Check if clients are exceeding rate limits.<br>
+
+<br>Server-side<br>
+Adjust rate limiting settings in Hasura.
+
+
+]]></description><link>v2-doc/issues/performance-issue/response-times.html</link><guid isPermaLink="false">V2 Doc/Issues/Performance Issue/Response Times.md</guid><pubDate>Fri, 09 Aug 2024 10:48:01 GMT</pubDate></item><item><title><![CDATA[Slow Queries]]></title><description><![CDATA[ 
+ <br>Postgres useful commands (Killing running queries, db size, running queries)<br>-- show running queries (9.2)
+SELECT pid, age(clock_timestamp(), query_start), usename, query 
+FROM pg_stat_activity 
+WHERE query != '&lt;IDLE&gt;' AND query NOT ILIKE '%pg_stat_activity%' 
+ORDER BY query_start desc;
+
+-- kill running query
+SELECT pg_cancel_backend(procpid);
+
+-- kill idle query
+SELECT pg_terminate_backend(procpid);
+
+-- vacuum command
+VACUUM (VERBOSE, ANALYZE);
+
+-- all database users
+select * from pg_stat_activity where current_query not like '&lt;%';
+
+-- all databases and their sizes
+select * from pg_user;
+
+-- all tables and their size, with/without indexes
+select datname, pg_size_pretty(pg_database_size(datname))
+from pg_database
+order by pg_database_size(datname) desc;
+
+-- cache hit rates (should not be less than 0.99)
+SELECT sum(heap_blks_read) as heap_read, sum(heap_blks_hit)  as heap_hit, (sum(heap_blks_hit) - sum(heap_blks_read)) / sum(heap_blks_hit) as ratio
+FROM pg_statio_user_tables;
+
+-- table index usage rates (should not be less than 0.99)
+SELECT relname, 100 * idx_scan / (seq_scan + idx_scan) percent_of_times_index_used, n_live_tup rows_in_table
+FROM pg_stat_user_tables 
+ORDER BY n_live_tup DESC;
+
+-- how many indexes are in cache
+SELECT sum(idx_blks_read) as idx_read, sum(idx_blks_hit)  as idx_hit, (sum(idx_blks_hit) - sum(idx_blks_read)) / sum(idx_blks_hit) as ratio
+FROM pg_statio_user_indexes;
+
+-- Dump database on remote host to file
+$ pg_dump -U username -h hostname databasename &gt; dump.sql
+
+-- Import dump into existing database
+$ psql -d newdb -f dump.sql
+Copy]]></description><link>v2-doc/issues/performance-issue/slow-queries.html</link><guid isPermaLink="false">V2 Doc/Issues/Performance Issue/Slow Queries.md</guid><pubDate>Fri, 02 Aug 2024 16:40:35 GMT</pubDate></item><item><title><![CDATA[Common Issues]]></title><description><![CDATA[ 
+ <br>
+<br>Incorrect Role Permissions
+
+<br>Review role-based access control settings in the Hasura console.
+<br>Adjust permissions as necessary.
+
+
+]]></description><link>v2-doc/issues/permission-issues/common-issues.html</link><guid isPermaLink="false">V2 Doc/Issues/Permission Issues/Common Issues.md</guid><pubDate>Fri, 02 Aug 2024 16:59:15 GMT</pubDate></item><item><title><![CDATA[Debugging process]]></title><description><![CDATA[ 
+ ]]></description><link>v2-doc/observability/debugging-process.html</link><guid isPermaLink="false">V2 Doc/Observability/Debugging process.md</guid><pubDate>Wed, 07 Aug 2024 15:53:37 GMT</pubDate></item><item><title><![CDATA[Logs]]></title><description><![CDATA[ 
+ <br>The Hasura GraphQL Engine has different kind of log-types depending on the sub-system or the layer. A log-type is simply the&nbsp;type&nbsp;field in a log line, which indicates which sub-system the log comes from.<br>For example, the HTTP webserver logs incoming requests as an access log and is called&nbsp;http-log. Similarly logs from the websocket layer are called&nbsp;websocket-log, logs from the Event Trigger system are called&nbsp;event-trigger&nbsp;etc.<br>You can configure the GraphQL Engine to enable/disable certain log-types using the&nbsp;--enabled-log-types&nbsp;flag or theHASURA_GRAPHQL_ENABLED_LOG_TYPES&nbsp;env var. See&nbsp;<a data-tooltip-position="top" aria-label="https://hasura.io/docs/latest/deployment/graphql-engine-flags/reference/#log-level" rel="noopener" class="external-link" href="https://hasura.io/docs/latest/deployment/graphql-engine-flags/reference/#log-level" target="_blank">GraphQL Engine server config reference</a><br>The default enabled&nbsp;Community Edition&nbsp;log-types are:&nbsp;startup, http-log, webhook-log, websocket-log, jwk-refresh-log<br>The default enabled&nbsp;Enterprise Edition&nbsp;log-types are:&nbsp;api-limit-log]]></description><link>v2-doc/observability/logs.html</link><guid isPermaLink="false">V2 Doc/Observability/Logs.md</guid><pubDate>Wed, 07 Aug 2024 15:56:08 GMT</pubDate></item><item><title><![CDATA[Metrics]]></title><description><![CDATA[ 
+ <br>Hasura exports three types of prometheus metrics:<br>
+<br>Histogram: Represents the distribution of a set of values across a set of buckets. Please note that the histogram buckets are&nbsp;<a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Histogram#Cumulative_histogram" rel="noopener" class="external-link" href="https://en.wikipedia.org/wiki/Histogram#Cumulative_histogram" target="_blank">cumulative</a>. You can read more about the histogram metric type&nbsp;<a data-tooltip-position="top" aria-label="https://prometheus.io/docs/concepts/metric_types/#histogram" rel="noopener" class="external-link" href="https://prometheus.io/docs/concepts/metric_types/#histogram" target="_blank">here</a>. For examplehasura_event_webhook_processing_time_seconds&nbsp;is a histogram metric.
+<br>Counter: Represents a cumulative metric that represents a single monotonically increasing counter whose value can only increase or be reset to zero on restart. You can read more about the counter metric type&nbsp;<a data-tooltip-position="top" aria-label="https://prometheus.io/docs/concepts/metric_types/#counter" rel="noopener" class="external-link" href="https://prometheus.io/docs/concepts/metric_types/#counter" target="_blank">here</a>. For example&nbsp;hasura_graphql_requests_total&nbsp;is a counter metric.
+<br>Gauge: Represents a single numerical value that can arbitrarily go up and down. You can read more about the gauge metric type&nbsp;<a data-tooltip-position="top" aria-label="https://prometheus.io/docs/concepts/metric_types/#gauge" rel="noopener" class="external-link" href="https://prometheus.io/docs/concepts/metric_types/#gauge" target="_blank">here</a>. For example&nbsp;hasura_active_subscriptions&nbsp;is a gauge metric.
+]]></description><link>v2-doc/observability/metrics.html</link><guid isPermaLink="false">V2 Doc/Observability/Metrics.md</guid><pubDate>Wed, 07 Aug 2024 15:58:25 GMT</pubDate></item><item><title><![CDATA[Reference Docs]]></title><description><![CDATA[ 
+ <br>
+<br><a rel="noopener" class="external-link" href="https://hasura.io/docs/latest/deployment/logging/" target="_blank">https://hasura.io/docs/latest/deployment/logging/</a>
+<br><a rel="noopener" class="external-link" href="https://hasura.io/docs/latest/observability/enterprise-edition/prometheus/metrics/" target="_blank">https://hasura.io/docs/latest/observability/enterprise-edition/prometheus/metrics/</a>
+<br>
+]]></description><link>v2-doc/observability/reference-docs.html</link><guid isPermaLink="false">V2 Doc/Observability/Reference Docs.md</guid><pubDate>Wed, 07 Aug 2024 15:58:34 GMT</pubDate></item><item><title><![CDATA[Traces]]></title><description><![CDATA[ 
+ ]]></description><link>v2-doc/observability/traces.html</link><guid isPermaLink="false">V2 Doc/Observability/Traces.md</guid><pubDate>Wed, 07 Aug 2024 15:57:23 GMT</pubDate></item><item><title><![CDATA[About]]></title><description><![CDATA[ 
+ <br><br>Table 1 - Table of Content]]></description><link>v2-doc/about.html</link><guid isPermaLink="false">V2 Doc/About.md</guid><pubDate>Fri, 09 Aug 2024 10:48:51 GMT</pubDate></item><item><title><![CDATA[Hasura Support Team]]></title><description><![CDATA[ 
+ <br><br>As a Hasura user, you can request support in a number of ways. Below, you'll find three options.<br><br>You can visit our&nbsp;<a data-tooltip-position="top" aria-label="https://hasurahelp.zendesk.com/hc/en-us/requests/new" rel="noopener" class="external-link" href="https://hasurahelp.zendesk.com/hc/en-us/requests/new" target="_blank">support portal</a>&nbsp;and — optionally — sign in before filling out the form:<br><img alt="Submit a request to Zendesk" src="https://hasura.io/docs/assets/images/submit-request-to-zendesk-f2024d3b46f4ef9ef0a98e769307db1d.png" referrerpolicy="no-referrer"><br>The more complete your description, the easier it will be to help you resolve your issue. Should you have the resources, please attach any assets (such as screenshots or screen recordings) that may help a support representative assist you.<br>When your form is complete, click&nbsp;Submit&nbsp;to create your ticket.<br><br>If your project is hosted on Hasura Cloud, you can submit a support request directly from your Hasura Cloud dashboard. Click on&nbsp;Help &amp; Support&nbsp;in the left-hand sidenav and create a new ticket:<br><img alt="Submit a request directly from Hasura Cloud" src="https://hasura.io/docs/assets/images/submit-request-from-cloud-616790430b33ccb98d88d672028c8e11.png" referrerpolicy="no-referrer"><br><br>Additionally, you can send an email to&nbsp;<a data-tooltip-position="top" aria-label="mailto:support@hasura.io" rel="noopener" class="external-link" href="mailto:support@hasura.io" target="_blank">support@hasura.io</a>&nbsp;with a description of the problem using the following&nbsp;<a data-tooltip-position="top" aria-label="https://hasura.io/support/#support-priority-definitions" rel="noopener" class="external-link" href="https://hasura.io/support/#support-priority-definitions" target="_blank">guidelines</a>&nbsp;to aid us in setting priorities.]]></description><link>v2-doc/get-support.html</link><guid isPermaLink="false">V2 Doc/Get Support.md</guid><pubDate>Fri, 09 Aug 2024 10:49:17 GMT</pubDate><enclosure url="https://hasura.io/docs/assets/images/submit-request-to-zendesk-f2024d3b46f4ef9ef0a98e769307db1d.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://hasura.io/docs/assets/images/submit-request-to-zendesk-f2024d3b46f4ef9ef0a98e769307db1d.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Glossary]]></title><description><![CDATA[ 
+ <br><br>The core component of Hasura that provides a real-time GraphQL API on top of your data sources.<br><br>A query language for APIs that allows clients to request exactly the data they need and nothing more.<br><br>Every GraphQL service defines a set of types which completely describe the set of possible data you can query on that service. This is called the GraphQL schema. Hasura automatically generates a GraphQL Schema for you from the tables in your connected databases, Hasura Actions you've defined, and other connected GraphQL or REST endpoints. When queries come in, they are validated and executed against that schema.<br><br>Docker is a system which allows the packaging up of code and all its dependencies so the an application runs quickly and reliably from one computing environment to another.<br><br>A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings. Hasura can be run as a Docker container.<br><br>Docker images become containers at runtime and in the case of Docker containers – images become containers when they run on Docker Engine which is available for both Linux and Windows-based applications, containerized software will always run the same, regardless of the infrastructure. Containers isolate software from its environment and ensure that it works uniformly despite differences for instance between development and staging. Hasura is distributed as a Docker image for the Community Edition at&nbsp;<a data-tooltip-position="top" aria-label="https://hub.docker.com/r/hasura/graphql-engine" rel="noopener" class="external-link" href="https://hub.docker.com/r/hasura/graphql-engine" target="_blank">DockerHub</a>.<br><br>Every GraphQL service has a&nbsp;query&nbsp;type and may or may not have a mutation type. These types are the same as a regular object type, but they are special because they define the entry point of every GraphQL query. In Hasura the query type is generated for you in order to get data from your schema.<br><br>The GraphQL&nbsp;mutation&nbsp;type is an optional type in the GraphQL specification but will be available to you on every configured Hasura endpoint in order to change or "mutate" data on your database, action or Remote Schema endpoints.<br><br>The container(s) serving the GraphQL API and in the critical path of every request/response.<br><br>An account on&nbsp;<a data-tooltip-position="top" aria-label="https://hasura.io/" rel="noopener" class="external-link" href="https://hasura.io/" target="_blank">hasura.io</a>&nbsp;in which multiple instances of Hasura Cloud can be created.<br><br>The open-source Community Edition of the Hasura GraphQL Engine.<br><br>The cloud-managed, optimized and massively scalable version of Hasura with the option to add the Hasura Enterprise Edition package and runs as a managed service. Hasura Cloud includes extra reliability, monitoring, caching, tracing, security and deployment features which aren't available in Hasura Community Edition.<br><br>A Hasura Cloud IP will be listed on the Hasura Cloud Dashboard for each project. Hasura will be connecting to your database from this IP address. If your database is not exposed to the internet, you must allow connections from this IP address on your firewall settings for Hasura Cloud Project to function properly. Otherwise, Hasura will not be able to connect to your database and the GraphQL API will not be available.<br><br>A Project is an individual GraphQL API hosted by Hasura Cloud. You can create a Project by going to the Hasura Cloud dashboard and then connecting a database from the Hasura Console. You can also provision a database on cloud platforms like Heroku from the Hasura Console itself.<br>Each project is allocated a unique auto-generated name and an ID. You can use this name or ID while communicating to Hasura team regarding this project. Each project is also assigned a GraphQL API endpoint of the format&nbsp;https://&lt;project-name&gt;.hasura.app/v1/graphql.<br>For example, a project might be called&nbsp;usable-cobra-29&nbsp;with ID&nbsp;bf0ea856-76a2-42c2-8a91-66ca9b9206e8.<br><br>When you open the Hasura Console on a Cloud Project, you will not be asked to enter the admin secret like Hasura Community Edition version. Instead, if you are an admin, the Console will be accessible with the admin secret already set, or if you are a collaborator with limited access you will be automatically logged into the Console via an OAuth2.0 based authorization flow. You will be given the right access based on your permissions for the particular Hasura Cloud Project.<br>After the login process is complete, you'll see a new header called&nbsp;Hasura-Collaborator-Token&nbsp;in the "Request Headers" section of GraphiQL. This token is used instead of admin secret to authenticate and authorize all the requests made from the Console. The token is only valid for 5mins and is refreshed silently by the Console. It is to be used only from Console.<br>For accessing the API from other clients, use the admin secret or create a Personal Access Token.<br><br>A self-hosted version of Hasura that includes enterprise specific features for observability, security and more.<br><br>A set of services that powers the Hasura Enterprise Edition Control Plane that allows for user/team management, managing Hasura GraphQL configuration and includes a monitoring plane that ingests Hasura &amp; GraphQL API metrics and makes it available over a UI and an API.<br><br>A rolling deployment is a deployment strategy that progressively replaces previous versions of an application with new versions. Rather than updating all servers or tiers simultaneously, the organization installs the updated software package on one server or subset of servers at a time. A rolling deployment helps reduce application downtime and prevent unforeseen consequences or errors in software updates.<br><br>Operations used to fetch data from the GraphQL API.<br><br>Operations used to modify data in the GraphQL API, such as inserting, updating, or deleting records.<br><br>Real-time GraphQL queries that allow clients to receive updates whenever the underlying data changes.<br><br>Definitions in the metadata that specify how tables are related, enabling automatic joins and data fetching across related tables.<br><br>Rules that define which users or roles can access specific parts of the GraphQL API or perform certain operations.<br><br> Integration of external GraphQL schemas into Hasura, allowing you to extend your GraphQL API with additional functionality.<br><br>Custom GraphQL mutations or queries that allow you to define custom business logic and execute it via Hasura’s GraphQL API.<br><br>Mechanisms to execute custom webhooks or serverless functions in response to database events, such as inserts, updates, or deletes.<br><br>The webbased user interface for managing and configuring Hasura, including schema management, permissions, and metadata.<br><br>Connections to external services or tools for authentication, logging, or other functionalities, which can be configured within Hasura.<br><br>Databases or other services connected to Hasura that provide the data for the GraphQL API.<br><br>Commandline interface tools, such as hasuracli, used for managing migrations, metadata, and other aspects of Hasura configuration.<br><br>Scripts that manage and track changes to the database schema over time, allowing you to apply or roll back changes.<br><br>The ability of GraphQL to query its own schema and provide details about available queries, mutations, and types.<br><br>Userdefined types in GraphQL that extend the builtin scalar types (e.g., String, Int) to handle specific data formats.<br><br>Mechanisms to filter which data changes trigger subscriptions, allowing for more precise realtime updates.<br><br>The ability to cache query results to improve performance and reduce load on the database.<br><br>A JavaScript framework for building datadriven React applications that can integrate with Hasura’s GraphQL API.<br><br>A technique to optimize performance by combining multiple requests into a single batch.<br><br>Exposing parts of your GraphQL API as RESTful endpoints for compatibility with existing systems or services.<br><br>Definitions of how tables in a database are related, which are used to automatically generate joins and data fetching in GraphQL.<br><br>Techniques and tools to improve the performance of GraphQL queries and reduce response times.<br><br>The process of defining and updating the structure of the GraphQL schema, including types, queries, mutations, and relationships.<br><br>The process of designing and structuring your database schema to support efficient and effective GraphQL queries.<br><br>Techniques for caching data on the client side to improve performance and reduce redundant requests to the server.<br><br>Functions that are executed in response to events, often used in conjunction with event triggers in Hasura.<br><br>Special annotations in your GraphQL schema that modify how the schema behaves or interacts with other components.<br><br>A service that provides a single entry point for managing and routing requests to multiple APIs, often used in conjunction with Hasura.<br><br>Combining data from multiple sources into a single GraphQL API, enabling a unified view of disparate data sources.<br><br>Controls to limit the number of requests a client can make to the GraphQL API within a certain timeframe.<br><br>Mechanisms for verifying the identity of users or clients accessing the GraphQL API.<br><br>Controls for determining what actions or data a user or client is permitted to access within the GraphQL API.<br><br>Database level triggers that can be used in conjunction with Hasura event triggers for more complex automation.<br><br>User defined scalar types in GraphQL that extend the standard scalar types to handle specific data formats.<br><br>Methods for deploying Hasura and its associated components to different environments, such as development, staging, and production.<br><br>Realtime data updates delivered via WebSocket connections, allowing clients to receive immediate notifications of changes.]]></description><link>v2-doc/glossary.html</link><guid isPermaLink="false">V2 Doc/Glossary.md</guid><pubDate>Fri, 09 Aug 2024 12:46:59 GMT</pubDate></item></channel></rss>
